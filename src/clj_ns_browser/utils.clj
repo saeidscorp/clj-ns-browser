@@ -282,7 +282,7 @@
      (var-traced? (ns-resolve ns s)))
   ([v]
     (let [vv (or (and (var? v) v) (and (symbol? v) (resolve v)))]
-       (and (var? vv) (meta vv) ((meta vv) ::clojure.tools.trace/traced)))))
+       (and (var? vv) (meta vv) ((meta vv) :clojure.tools.trace/traced)))))
 
 
 ;; should move to clj-info
